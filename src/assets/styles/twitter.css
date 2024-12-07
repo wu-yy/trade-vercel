@@ -1,0 +1,100 @@
+.twitter-container {
+    display: flex;
+    height: 100vh; /* 全屏高度 */
+    width: 100vw; /* 全屏宽度 */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .left-panel {
+    background-color: #f2f2f2; /* 浅灰色背景 #f2f2f2 */
+    width: 20%; /* 左侧占 20% 宽度 */
+    border-right: 0px solid #e0e0e0; /* 竖线分隔 */
+    padding: 80px 20px 0 20px;
+    box-sizing: border-box; /* 包含内边距 */
+  }
+  
+  .right-panel {
+    display: flex;
+    width: 80%; /* 占据整个屏幕宽度 */
+    height: 100%; /* 可根据需求调整高度 */
+    background-color: white; /* 白色背景 */
+    box-sizing: border-box; /* 包含内边距 */
+    /* gap: 0px; */
+    /* overflow-x: auto; */
+    padding: 60px 0 0 0;
+    /* flex-grow: 1; 占满剩余宽度 */
+  }
+  
+  .tweet-column {
+    flex: 1;
+    /* min-width: 300px;
+    max-width: 500px; */
+    background-color: white;
+    /* border-radius: 15px; */
+    box-sizing: border-box; /* 包括内边距 */
+    padding: 0px 0 0 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: calc(100vh - 40px);
+    border-left: 1px solid #e0e0e0; /* 左侧分割线 */
+  }
+  
+  /* 第一个 TweetColumn 移除左侧分割线 */
+  .tweet-column:first-child {
+    border-left: none;
+  }
+  
+  /* 隐藏滚动条 */
+  .tweet-column::-webkit-scrollbar {
+    display: none;
+  }
+  
+  @media (max-width: 1200px) {
+    .twitter-container {
+      flex-direction: column;
+    }
+  
+    .left-panel {
+      width: 100%;
+      /* overflow-x: hidden;
+      overflow-y: auto; */
+      /* max-height: 300px; */
+    }
+  
+    .right-panel {
+      flex-direction: column;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  
+    .tweet-column {
+      max-width: none;
+    }
+  }
+  
+  /* Custom scrollbar styles */
+  .left-panel::-webkit-scrollbar,
+  .right-panel::-webkit-scrollbar,
+  .tweet-column::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .left-panel::-webkit-scrollbar-track,
+  .right-panel::-webkit-scrollbar-track,
+  .tweet-column::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .left-panel::-webkit-scrollbar-thumb,
+  .right-panel::-webkit-scrollbar-thumb,
+  /* .tweet-column::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+  } */
+  
+  .left-panel::-webkit-scrollbar-thumb:hover,
+  .right-panel::-webkit-scrollbar-thumb:hover,
+  .tweet-column::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

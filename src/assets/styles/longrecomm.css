@@ -1,0 +1,121 @@
+.rec-page {
+  display: flex;
+  height: 100vh; /* 全屏高度 */
+  width: 100vw; /* 全屏宽度 */
+  padding: 60px 0 0 0;
+  margin: 0;
+  overflow: hidden; /* 防止内容溢出 */
+}
+
+.rec-page .left-part {
+  /* background-color: #f2f2f2; 浅灰色背景 #f2f2f2 */
+  width: 20%; /* 左侧占 20% 宽度 */
+  border-right: 1px solid #e0e0e0; /* 竖线分隔 */
+  padding: 0px 0px 0 0px;
+  box-sizing: border-box; /* 包含内边距 */
+  /* height: 100%;  */
+  border-radius: 0 0px 0px 0;
+  margin: 0px 0px 0px 0px;
+}
+
+/* 默认布局（大屏幕 3:7） */
+.center-part> .center-top {
+  flex: 32; /* 占总高度的 3/10 */
+}
+.center-part> .center-bottom {
+  flex: 68; /* 占总高度的 7/10 */
+}
+
+/* 小屏幕布局（4:6） */
+@media (max-width: 2048px) { /* 小于 768px 时切换 */
+  .center-part > .center-top {
+    flex: 4; /* 占总高度的 4/10 */
+  }
+  .center-part > .center-bottom {
+    flex: 6; /* 占总高度的 6/10 */
+  }
+}
+
+.rec-page .center-part {
+  display: flex;
+  flex-direction: column; /* 上下排列 */
+  width: 80%; /* 占据整个屏幕宽度 */
+  max-width: 80%; /* 占据整个屏幕宽度 */
+  /* height: 100%; 可根据需求调整高度 */
+  background-color: white; /* 白色背景 */
+  box-sizing: border-box; /* 包含内边距 */
+  /* gap: 0px; */
+  /* overflow-x: auto; */
+  overflow: hidden; /* 防止内容溢出 */
+  /* gap: 20px; 上下模块之间的间距 */
+  /* padding-right: 60px; */
+  margin: 0px 0px 0px 0px;
+}
+
+.center-top {
+  display: flex;
+  flex-direction: column;
+  /* flex: 4;  */
+  width: 100%;
+  background-color: #ffffff; /* 模块背景色 */
+  border-radius: 0px; /* 圆角 */
+  /* box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1); */
+  /* padding: 20px; 内边距 */
+  overflow-y: hidden; /* 启用垂直滚动 */
+  box-sizing: border-box; /* 包括内边距计算 */
+  /* 垂直居中相关样式 */
+  justify-content: center; /* 水平居中 */
+  align-items: left; /* 垂直居中 */
+  margin: 0px 0px 0px 0px;
+  border-bottom: 1px solid #e0e0e0; /* 竖线分隔 */
+}
+
+.center-bottom {
+  display: flex;
+  flex-direction: column;
+  /* align-items: left; 垂直居中 */
+  /* flex: 6;  */
+  width: 100%;
+  background-color: #ffffff; /* 模块背景色 */
+  border-radius: 0px; /* 圆角 */
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
+  /* padding: 20px; 内边距 */
+  overflow-y: auto; /* 启用垂直滚动 */
+  box-sizing: border-box; /* 包括内边距计算 */
+}
+
+.rec-page .right-part {
+  background-color: #f2f2f2; /* 浅灰色背景 #f2f2f2 */
+  width: 20%; /* 左侧占 20% 宽度 */
+  border-right: 0px solid #e0e0e0; /* 竖线分隔 */
+  padding: 0px 0px 0 0px;
+  box-sizing: border-box; /* 包含内边距 */
+}
+
+.panel-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 15px 0px 15px 15px;
+  position: relative;
+  color: #007aff; /* 标题文字颜色 */
+  display: flex;
+  align-items: center;
+}
+
+/* 左侧粗线 */
+.card-title::before {
+  content: ''; /* 伪元素内容为空 */
+  display: inline-block;
+  width: 4px; /* 线的宽度 */
+  height: 100%; /* 线的高度，与文字居中对齐 */
+  background-color: #8a9fff; /* 竖线颜色 */
+  margin-right: 8px; /* 与文字的间距 */
+  border-radius: 2px; /* 线条圆角 */
+}

@@ -1,0 +1,160 @@
+  /* .container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+  } */
+
+  /* 设置整个页面为全屏 */
+  .login-page {
+    display: flex; /* 启用 Flexbox 布局 */
+    justify-content: center; /* 水平方向居中 */
+    align-items: center; /* 垂直方向居中 */
+    height: 100vh; /* 占满整个视口高度 */
+    margin: 0;
+    background-color: rgb(255, 255, 255); /* 背景色 */
+  }
+
+  /* 登录卡片样式 */
+  .login-card {
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 0px;
+    box-shadow: 0 4px 6px rgb(255, 255, 255);
+    width: 100%;
+    max-width: 1200px; /* 卡片的最大宽度 */
+    text-align: center; /* 居中对齐内容 */
+  }
+
+/* 
+  .card {
+    background-color: var(--card-background);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+  }
+   */
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid white;
+    border-radius: 0px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    background-color: var(--background-color);
+    color: rgb(0, 0, 0);
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 0px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .login-link {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--accent-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .login-link:hover {
+    color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      margin: 20px auto;
+    }
+  
+    .card {
+      flex-direction: column;
+    }
+  
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    .form-input,
+    .submit-btn {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+
+/* 整体容器：使内容水平和垂直居中 */
+.login-container {
+  display: flex; /* 启用 Flexbox 布局 */
+  justify-content: center; /* 水平方向居中 */
+  align-items: center; /* 垂直方向居中 */
+  height: 100vh; /* 占满整个视口高度 */
+  text-align: center; /* 文本水平居中 */
+  background-color: #f9f9f9; /* 可选背景色 */
+}
+
+/* 内部内容 */
+.centered-content {
+  display: flex;
+  flex-direction: column; /* 垂直排列内容 */
+  justify-content: center; /* 垂直居中 */
+  align-items: center; /* 水平居中 */
+  height: 100vh; /* 占满视口高度 */
+}
+
+/* Alpha 图标样式 */
+.alpha-icon {
+  font-size: 10rem; /* 调整字体大小 */
+  color: #007bff; /* 默认蓝色，可切换 */
+  font-weight: bold;
+  line-height: 1; /* 确保没有额外的垂直间隙 */
+  text-align: center; /* 水平对齐 */
+  display: flex; /* 使用 Flexbox 修复对齐问题 */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* 标题文字样式 */
+.crypto-title {
+  font-size: 3rem; /* 标题字体大小 */
+  font-weight: 700; /* 加粗字体 */
+  color: #f6b93b;  /*#f39c12, #f6b93b, #007bff, #0056b3, #6f86d6, #a8d08d, #20c997*/
+  margin-bottom: 12px; /* 标题与描述文字的间距 */
+}
+
+/* 描述文字样式 */
+.description {
+  font-size: 1.2rem; /* 描述文字大小 */
+  color: #6b7280; /* 灰色文字 */
+}

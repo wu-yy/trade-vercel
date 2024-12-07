@@ -1,0 +1,163 @@
+.trading-pairs {
+    display: flex; /* 启用 flex 布局 */
+    flex-direction: column; /* 垂直排列 */
+    width: 100%;
+    /* overflow-x: auto; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    overflow: hidden;
+}
+
+.controls {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.trading-table{
+    overflow-y: auto; /* 启用垂直滚动 */
+    padding: 0 0px 0 0px;
+}
+
+.filter-pair-form{
+    border: 1px solid var(--border-color);
+    text-align: start;
+    /* width: max-content; */
+    width: 300px;
+    max-height:fit-content;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 5px 0 5px 20px;
+}
+
+.add-pair-form {
+    display: flex;
+    max-height:fit-content;
+    align-items: center; /* 垂直居中 */
+    /* width: max-content; */
+}
+
+.trend-up {
+    color: #34c759;
+}
+
+.trend-down {
+    color: #ff3b30;
+}
+
+.value-low {
+    color: #34c759;
+}
+
+.value-high {
+    color: #ff3b30;
+}
+
+.golden-cross {
+    color: #ffd700;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.death-cross {
+    color: #000000;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.breakout-up {
+    color: #34c759;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.breakout-down {
+    color: #ff3b30;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.overbought {
+    color: #ff3b30;
+}
+
+.oversold {
+    color: #34c759;
+}
+
+.long {
+    color: #34c759;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.short {
+    color: #ff3b30;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.neutral {
+    color: #8e8e93;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.high-volatility,
+.volume-surge {
+    background-color: #ffcc00;
+    color: #000000;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.adx-weak {
+    color: #8e8e93;
+}
+
+.adx-moderate {
+    color: #ff9500;
+}
+
+.adx-strong {
+    color: #ff3b30;
+}
+
+.delete-btn {
+    background-color: #ff3b30;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #d63030;
+}
+
+.alert {
+    color: #ff3b30;
+    font-weight: bold;
+}
+
+.recommendation-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.recommendation-details {
+    font-size: 12px;
+    color: #666;
+}

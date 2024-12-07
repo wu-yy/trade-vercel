@@ -1,0 +1,238 @@
+/* 外部容器样式 */
+.recommended-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* padding: 0px; */
+  /* border-radius: 0 30px 30px 0; */
+  box-sizing: border-box;
+  overflow: hidden; /* 确保子元素不溢出 */
+  overscroll-behavior: none; /* 禁止上下弹性滚动 */
+  /* box-shadow: 0 0px 6px rgba(0, 0, 0, 0.2);  */
+}
+
+/* 外部容器 */
+.recommended-pairs-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* 防止内容溢出 */
+  /* width: 100%; */
+  height: 100%;
+  /* width: 100%; */
+  padding: 0;
+  overscroll-behavior: none; /* 禁止上下弹性滚动 */
+  /* padding: 60px; */
+}
+
+/* 滑动区域 */
+.recommended-pairs-scroll {
+  /* flex: 1; */
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  overflow-x: auto; /* 启用水平滚动 */
+  overflow-y: hidden; /* 启用水平滚动 */
+  scroll-behavior: smooth; /* 平滑滚动 */
+  /* gap: 20px; 卡片之间的间距 */
+  padding: 0px 30px 0 30px;
+  height: 100%;
+  box-sizing: border-box; /* 包括内边距计算宽高 */
+  width: 100%; /* 确保滚动区域不超出页面宽度 */
+}
+
+.recommended-pairs {
+  display: flex;
+  flex-wrap: nowrap;  /*nowrap*/
+  justify-content: center; /* 从左向右排列 */
+  gap: 20px;
+  height: fit-content;
+  /* margin: 0px 80px 0px 80px; */
+  padding: 0px 0px 0 0px;
+  word-wrap: break-word; /* 支持旧版浏览器 */
+  box-sizing: border-box; /* 包括内边距计算宽高 */
+  /* overflow: hidden; */
+}
+
+.recommended-pair {
+  display: flex; /* 启用 flex 布局 */
+  flex-direction: column; /* 垂直排列 */
+  justify-content: center; /* 垂直居中 */
+  align-items: center; /* 水平居中 */
+  text-align: center; /* 文本居中 */
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  border-radius: 15px;
+  padding: 10px 0;
+  width: 260px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.recommended-pair:hover {
+  transform: translateY(-5px);
+  /* 均匀四面阴影 */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03), /* 下方阴影 */
+              0px -4px 10px rgba(0, 0, 0, 0.03), /* 上方阴影 */
+              4px 0px 10px rgba(0, 0, 0, 0.03), /* 右侧阴影 */
+              -4px 0px 10px rgba(0, 0, 0, 0.03); /* 左侧阴影 */
+
+  /* backdrop-filter: blur(10px); 背景模糊 */
+}
+
+.recommended-pair h3 {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.recommended-pair .score {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+.recommended-pair .direction {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.recommended-pair .direction.long {
+  background-color: rgba(52, 199, 89, 0.1);
+  color: var(--long-color);
+}
+
+.recommended-pair .direction.short {
+  background-color: rgba(255, 59, 48, 0.1);
+  color: var(--short-color);
+}
+
+.recommended-pair .holding-time,
+.recommended-pair .signal-strength,
+.recommended-pair .adx,
+.recommended-pair .volatility {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.score-explanation {
+  text-align: center;
+  margin-top: 25px;
+  font-style: italic;
+  color: var(--neutral-color);
+  font-size: 14px;
+}
+
+.no-recommendations {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+.no-recommendations p {
+  margin: 5px 0;
+  color: var(--text-color);
+}
+
+/* 股票名称和星标容器 */
+.stock-name {
+  display: inline-flex; /* 使用 Flexbox 让名称和星标在一行显示 */
+  align-items: center; /* 垂直居中对齐 */
+  font-size: 1.5rem; /* 股票名称字体大小 */
+  font-weight: bold; /* 加粗字体 */
+}
+
+/* 星标样式 */
+.star-icon {
+  color: #ffcc00; /* 星标颜色（金黄色） */
+  font-size: 1rem; /* 星标大小 */
+  margin-left: 8px; /* 股票名称和星标之间的间距 */
+  animation: sparkle 1.5s infinite; /* 闪烁动画 */
+}
+
+/* 定义闪动效果 */
+@keyframes sparkle {
+0%, 100% {
+  opacity: 1;
+  transform: scale(1);
+}
+50% {
+  opacity: 0.5;
+  transform: scale(1.2);
+}
+}
+
+/* 按钮基础样式 */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* 圆形按钮 */
+  background-color: rgba(173, 216, 230, 0.4); /* 非常浅的蓝色 */
+  color: #fff; /* 按钮文字颜色 */
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px); /* 毛玻璃效果 */
+  cursor: pointer;
+  opacity: 0; /* 默认隐藏 */
+  transition: all 0.4s ease; /* 平滑过渡动画 */
+}
+
+/* 左侧按钮样式 */
+.scroll-btn.left-btn {
+  position: absolute;
+  left: 10px; /* 确保按钮不会超出容器 */
+  z-index: 10; 
+}
+
+/* 右侧按钮样式 */
+.scroll-btn.right-btn {
+  position: absolute;
+  right: 10px; /* 确保按钮靠右侧对齐 */
+  z-index: 10;
+}
+
+/* 按钮悬停效果 */
+.scroll-btn:hover {
+  background-color: #87CEEB;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 按钮显示时的样式 */
+.scroll-btn.show {
+  opacity: 1; 
+}
+
+/* Smooth hover interaction */
+.scroll-btn.show {
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* 调整鼠标进入和离开容器时的动画 */
+.module-container:hover .scroll-btn {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+/* 鼠标悬停时显示按钮 */
+.recommended-pairs-container:hover .scroll-btn {
+  opacity: 1;
+}
+
+/* 隐藏滚动条 */
+.recommended-pairs-scroll::-webkit-scrollbar {
+  display: none;
+}

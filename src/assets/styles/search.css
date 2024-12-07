@@ -1,0 +1,66 @@
+  /* 搜索框和按钮的容器 */
+  .search-container {
+    width: 100%;
+    padding: 0px;
+    /* max-width: 1200px; 设置搜索区域最大宽度 */
+    margin: 30px 0 auto; /* 居中 */
+  }
+  
+  /* 搜索框和按钮一行排列 */
+  .search-row {
+    display: flex; /* 启用 Flex 布局 */
+    align-items: center; /* 垂直居中 */
+    gap: 15px; /* 搜索框和按钮的间距 */
+    margin-bottom: 20px; /* 搜索区域和图表之间的间距 */
+    max-width: 100%; /* 搜索区域占满可用空间 */
+  }
+  
+  /* 搜索框样式 */
+  .search-input {
+    flex-grow: 1; /* 搜索框占满可用空间 */
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc; /* 搜索框边框 */
+    border-radius: 4px; /* 圆角效果 */
+    outline: none;
+  }
+  /* class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"  */
+
+  /* 按钮样式 */
+  .search-button {
+    padding: 10px 30px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff; /* 按钮背景颜色 */
+    border: none; /* 无边框 */
+    border-radius: 4px; /* 按钮圆角 */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  /* class="mt-2 w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300" */
+
+  .search-button:hover {
+    background-color: #0056b3; /* 鼠标悬停时按钮颜色 */
+  }
+  
+  /* 图表容器 */
+  .chart-container {
+    border: 1px solid #ccc; /* 图表边框 */
+    border-radius: 4px; /* 图表圆角 */
+    padding: 10px; 
+    background-color: white; /* 图表背景颜色 */
+    width: 100%; /* 图表最大宽度 */
+    /* max-width: 1200px; 限制图表宽度 */
+    margin: 0 auto; /* 居中图表 */
+  }
+
+  @media (max-width: 768px) {
+  .search-row {
+    flex-direction: column; /* 改为垂直排列 */
+    gap: 15px; /* 调整间距 */
+  }
+
+  .search-button {
+    width: 100%; /* 按钮宽度占满 */
+  }
+  }
